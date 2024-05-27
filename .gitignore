@@ -19,3 +19,4 @@ yarn-error.log
 /.vscode
 /storage/database
 /storage/database.sqlite
+/argon-dashboard-v1.0.0/
