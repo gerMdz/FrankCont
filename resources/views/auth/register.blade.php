@@ -4,31 +4,17 @@
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-7">
                     <div class="card bg-secondary shadow border-0">
-                        <div class="card-header bg-transparent pb-5">
-                            <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
-                            <div class="btn-wrapper text-center">
-                                <a href="#" class="btn btn-neutral btn-icon">
-                                    <span class="btn-inner--icon"><img
-                                            src="{{asset('img/icons/common/github.svg')}}"></span>
-                                    <span class="btn-inner--text">Github</span>
-                                </a>
-                                <a href="#" class="btn btn-neutral btn-icon">
-                                    <span class="btn-inner--icon"><img
-                                            src="{{asset('img/icons/common/google.svg')}}"></span>
-                                    <span class="btn-inner--text">Google</span>
-                                </a>
-                            </div>
-                        </div>
+
                         <div class="card-body px-lg-5 py-lg-5">
                             <div class="text-center text-muted mb-4">
-                                <small>Or sign in with credentials</small>
+                                <small>Ingrese sus datos para el registro</small>
                             </div>
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 <!-- Name -->
                                 <div>
-                                    <x-input-label for="name" :value="__('Name')"/>
+                                    <x-input-label for="name" :value="__('Nombre')"/>
                                     <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
                                                   :value="old('name')" required autofocus autocomplete="name"/>
                                     <x-input-error :messages="$errors->get('name')" class="mt-2"/>
@@ -44,7 +30,7 @@
 
                                 <!-- Password -->
                                 <div class="mt-4">
-                                    <x-input-label for="password" :value="__('Password')"/>
+                                    <x-input-label for="password" :value="__('Contraseña')"/>
 
                                     <x-text-input id="password" class="block mt-1 w-full"
                                                   type="password"
@@ -56,7 +42,7 @@
 
                                 <!-- Confirm Password -->
                                 <div class="mt-4">
-                                    <x-input-label for="password_confirmation" :value="__('Confirm Password')"/>
+                                    <x-input-label for="password_confirmation" :value="__('Confirmar Contraseña')"/>
 
                                     <x-text-input id="password_confirmation" class="block mt-1 w-full"
                                                   type="password"
@@ -68,11 +54,11 @@
                                 <div class="flex items-center justify-end mt-4">
                                     <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                                        href="{{ route('login') }}">
-                                        {{ __('Already registered?') }}
+                                        {{ __('Ya tengo cuenta') }}
                                     </a>
 
                                     <x-primary-button class="ms-4">
-                                        {{ __('Register') }}
+                                        {{ __('Registrarme') }}
                                     </x-primary-button>
                                 </div>
                             </form>
@@ -80,10 +66,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <a href="#" class="text-light"><small>Forgot password?</small></a>
-                        </div>
-                        <div class="col-6 text-right">
-                            <a href="#" class="text-light"><small>Create new account</small></a>
+                            <a href="#" class="text-light"><small>Olvidé mi contraseña</small></a>
                         </div>
                     </div>
                 </div>
