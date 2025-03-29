@@ -1,4 +1,6 @@
 <x-form>
+    @section('title', 'Registrarse')
+    @section('subtitle', 'Ingresa tus datos para registrarte')
     @section('content')
         <div class="container mt--8 pb-5">
             <div class="row justify-content-center">
@@ -6,9 +8,7 @@
                     <div class="card bg-secondary shadow border-0">
 
                         <div class="card-body px-lg-5 py-lg-5">
-                            <div class="text-center text-muted mb-4">
-                                <small>Ingrese sus datos para el registro</small>
-                            </div>
+
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 

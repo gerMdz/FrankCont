@@ -1,6 +1,8 @@
 <x-form>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')"/>
+    @section('title', 'Inicio de sesión')
+    @section('subtitle', 'Ingresa tus credenciales para iniciar sesión')
     @section('content')
         <div class="container mt--8 pb-5">
             <div class="row justify-content-center">
@@ -8,9 +10,7 @@
                     <div class="card bg-secondary shadow border-0">
 
                         <div class="card-body px-lg-5 py-lg-5">
-                            <div class="text-center text-muted mb-4">
-                                <small>Ingresar</small>
-                            </div>
+
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
 
